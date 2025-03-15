@@ -12,3 +12,4 @@ C:\Users\Er\source\repos\Horse Race\Horse Race\obj\Debug\net8.0\refint\Horse Rac
 C:\Users\Er\source\repos\Horse Race\Horse Race\obj\Debug\net8.0\Horse Race.pdb
 C:\Users\Er\source\repos\Horse Race\Horse Race\obj\Debug\net8.0\Horse Race.genruntimeconfig.cache
 C:\Users\Er\source\repos\Horse Race\Horse Race\obj\Debug\net8.0\ref\Horse Race.dll
+C:\Users\Er\source\repos\Horse Race\Horse Race\obj\Debug\net8.0\Horse Race.sourcelink.json

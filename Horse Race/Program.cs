@@ -8,18 +8,30 @@ namespace Horse_Race
         static void Main(string[] args)
         {
 
-            string wheather = "rainy";
+            string wheather = "normal";
 
-            Race race = new Race(70, wheather);
+            Race race = new Race(50, wheather);
             race.addhorse("jack");
             race.addhorse("jesy");
             race.addhorse("white");
             race.addhorse("black");
-            Console.WriteLine("the race is started pleas enter to start: ");
-           
-            Console.ReadLine();
-
+            Console.WriteLine("the race is started enter the horse name you eant to bet:  ");
+            string name = Console.ReadLine();
             race.Start();
+            if (name == race.Winner)
+            {
+                Console.WriteLine("Your horse is win");
+            }
+            else
+            {
+                Console.WriteLine("your horse lose");
+            }
+
+
+
+
+
+
 
         }
     }
@@ -36,17 +48,17 @@ namespace Horse_Race
         }
         public void Run()
         {
-            if (Wheather == "normal".ToLower())
+            var wheather = Wheather.ToLower();
+            if (wheather == "normal")
             {
                 Distance += random.Next(3, 5);
             }
-            else if (Wheather == "rainy".ToLower())
+            else if (wheather == "rainy")
             {
                 Distance += random.Next(0, 2);
             }
 
-
-            else if (Wheather == "snowyi".ToLower())
+            else if (wheather == "snowy")
             {
                 Distance += random.Next(0, 1);
             }
@@ -57,6 +69,7 @@ namespace Horse_Race
         private List<Horse> horses = new List<Horse>();
         private int TrackLenth;
         public string Weather { get; set; }
+      
         public Race(int lenth, string weather)
         {
             TrackLenth = lenth;
@@ -79,6 +92,7 @@ namespace Horse_Race
 
 
         }
+        public string Winner { get; private set; } = "";
         private bool RunTurn()
         {
             bool finished = false;
@@ -86,9 +100,10 @@ namespace Horse_Race
             {
                 horse.Run();
                 Console.WriteLine($"Horse Name is {horse.Horsename} horse distance {new string('-', horse.Distance)} ♠");
-                if (horse.Distance >= TrackLenth)
+                if (horse.Distance >= TrackLenth && Winner == "")
                 {
                     Console.WriteLine($"{horse.Horsename} is win!");
+                    Winner = horse.Horsename;
                     finished = true;
                 }
 
