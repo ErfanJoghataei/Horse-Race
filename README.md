@@ -30,8 +30,7 @@
 3. دستور زیر را برای اجرای برنامه وارد کنید:
 
 ```bash
-dotnet run
-.
+'dotnet run'
 .
 .
 # 🏇 Horse Race Simulator
