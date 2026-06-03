@@ -15,16 +15,16 @@ namespace Horse_Race
             race.addhorse("jesy");
             race.addhorse("white");
             race.addhorse("black");
-            Console.WriteLine("the race is started enter the horse name you eant to bet:  ");
+            Console.WriteLine("the race is started enter the horse name you want to bet:  ");
             string name = Console.ReadLine();
             race.Start();
             if (name == race.Winner)
             {
-                Console.WriteLine("Your horse is win");
+                Console.WriteLine("Your horse has won!");
             }
             else
             {
-                Console.WriteLine("your horse lose");
+                Console.WriteLine("your horse has lost");
             }
 
 
@@ -102,7 +102,7 @@ namespace Horse_Race
                 Console.WriteLine($"Horse Name is {horse.Horsename} horse distance {new string('-', horse.Distance)} ♠");
                 if (horse.Distance >= TrackLenth && Winner == "")
                 {
-                    Console.WriteLine($"{horse.Horsename} is win!");
+                    Console.WriteLine($"{horse.Horsename} has won!");
                     Winner = horse.Horsename;
                     finished = true;
                 }
